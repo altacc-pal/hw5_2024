@@ -80,6 +80,7 @@
 
   @media screen and (min-width: 900px) {
 
+    /* Move logo as far left as possible and the links as far right as possible */
     header {
         display: flex;
         flex-direction: row;
@@ -91,6 +92,7 @@
         flex-direction: row;
     }
 
+    /* Correct the size and alignment of pricing and card */
     .pricing {
         align-items: center;
         flex-basis: 275px;
@@ -100,6 +102,7 @@
         flex-basis: 275px;
     }
 
+    /* Make the main header appear at the top when scrolling */
     body > header {
         top: 0;
         position: sticky;
@@ -108,6 +111,7 @@
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
+    /* Remove any logo animations when a user prefers reduced motion */
     #logo {
         animation: none;
     }
@@ -115,11 +119,13 @@
 
   @media print {
 
+    /* Remove background and add fonts */
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
 
+    /* Stretch nav elements and nav links */
     nav {
         align-self: stretch;
     }
@@ -129,17 +135,20 @@
         justify-content: space-around;
     }
 
+    /* Align pricing class elements along the bottom */
     .pricing {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: flex-end;
     }
 
+    /* Add a border to the card class */
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
 
+    /* Hide gallery*/
     #gallery {
         display: none;
     }
@@ -148,6 +157,7 @@
         display: none;
     }
 
+    /* Add thumbs up entity to the second child in card's ul; just like in the screenshot provided */
     .card > ul > li:nth-child(2)::after {
         content: '\1F44D';
     }
